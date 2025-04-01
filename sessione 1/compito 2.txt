@@ -1,0 +1,66 @@
+Esercizio 1
+ Classificazione degli Indirizzi IP Classifica gli indirizzi IP seguenti in classi A, B, C, D, o E
+
+●192.168.1.1 Risposta C	
+	
+●150.10.1.1 Risposta B
+
+● 10.1.1.1 Risposta A
+
+● 223.1.1.1 Risposta C
+
+● 172.16.1.1 Risposta B
+
+
+Esercizio 2
+Calcolo del Numero di Host Per ciascuna subnet, calcola il numero massimo di host utilizzabili:
+
+ ● Subnet con una maschera di sottorete 255.255.255.192
+	 		rete		   host
+	1111 1111.1111 11111.1111 1111.11|00 0000| 6/0 = 2^6=64-2=62
+
+		       Risposta= 62
+-----------------------------------------------------------------------------------------------------------------
+ ● Subnet con una maschera di sottorete 255.255.252.0.
+ 		   rete		         host
+	1111 1111.1111 11111.1111 11|00. 0000 0000| 10/0 = 2^10=1024-2=1022
+
+                           Risposta= 1022
+-----------------------------------------------------------------------------------------------------------------
+
+ ● Subnet con una maschera di sottorete 255.255.255.0.
+    		   rete		          host
+	1111 1111.1111 11111.1111 1111.|0000 0000| 8/0 = 2^8=256-2=254
+
+                           Risposta= 254
+-----------------------------------------------------------------------------------------------------------------
+Esercizio 3
+ Identificare la Rete e l'Host Dato un indirizzo IP e la sua maschera di sottorete, identifica la rete e l'host:
+
+ ● Indirizzo IP 192.168.10.45*, Maschera di sottorete: 255.255.255.0.
+	ip: 1100 0000 . 1010 1000 . 0000 1010 . 0010 1101
+       sub: 1111 1111 . 1111 1111 . 1111 1111 . 0000 0000
+ bit a bit: 1100 0000 . 1010 1000 . 0000 1010 . 0000 0000
+   ip rete: 192.168.10.0
+      host: 45*
+
+-----------------------------------------------------------------------------------------------------------------
+
+ ● Indirizzo IP 172.16.25.78*, Maschera di sottorete: 255.255.0.0.
+        ip: 1010 1100 . 0001 0000 . 0001 1001 . 0100 1110
+       sub: 1111 1111 . 1111 1111 . 0000 0000 . 0000 0000
+ bit a bit: 1010 1100 . 0001 0000 . 0000 0000 . 0000 0000
+   ip rete: 172.16.0.0
+      host: 25.78*
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+ ● Indirizzo IP 10.0.1.33*, Maschera di sottorete: 255.255.255.192.
+        ip: 1010 0000 . 0000 0000 . 0000 0001 . 0010 0001
+       sub: 1111 1111 . 1111 1111 . 1111 1111 . 1100 0000
+ bit a bit: 1010 0000 . 0000 0000 . 0000 0001 . 0000 0000
+   ip rete: 160.0.1.0
+      host: 33*
+
+
