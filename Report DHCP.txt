@@ -1,0 +1,27 @@
+Report Configurazione DHCP – Cisco Packet Tracer
+
+Obiettivo:
+Configurare un server DHCP per assegnare automaticamente IP a due reti collegate da un router.
+
+Topologia:
+- PC0 e PC1 collegati a Switch0, che è collegato al Server0 e al Router (porta Fa0/0)
+- Il Router (porta Fa0/1) è collegato a Switch1, dove sono collegati Server1, PC2 e PC3
+
+Configurazione Router:
+- Fa0/0: 192.168.1.1 /24
+- Fa0/1: 192.168.2.1 /24
+
+Server0 (rete 192.168.1.0):
+- IP statico: 192.168.1.2
+- Start IP: 192.168.1.10
+- Gateway: 192.168.1.1
+- Subnet Mask: 255.255.255.0
+
+Server1 (rete 192.168.2.0):
+- IP statico: 192.168.2.2
+- Start IP: 192.168.2.10
+- Gateway: 192.168.2.1
+- Subnet Mask: 255.255.255.0
+
+Risultato:
+I dispositivi ricevono IP via DHCP, riescono a pingare il router e comunicano tra loro senza problemi.
